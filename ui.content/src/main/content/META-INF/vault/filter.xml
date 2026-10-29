@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workspaceFilter version="1.0">
+    <filter root="/conf/skodaaemlearning" mode="merge"/>
+    <filter root="/content/skodaaemlearning" mode="merge"/>
+    <filter root="/content/dam/skodaaemlearning" mode="merge">
+        <exclude pattern="/content/dam/skodaaemlearning(/.*)?"/>
+        <include pattern="/content/dam/skodaaemlearning/jcr:content(/.*)?"/>
+    </filter>
+    <filter root="/content/dam/skodaaemlearning/asset.jpg" mode="merge"/>
+    <filter root="/content/experience-fragments/skodaaemlearning" mode="merge"/>
+</workspaceFilter>

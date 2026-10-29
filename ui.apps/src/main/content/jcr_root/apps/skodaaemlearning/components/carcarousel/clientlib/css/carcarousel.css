@@ -1,0 +1,108 @@
+/* Skoda Car Carousel styles */
+.cmp-carcarousel {
+    padding: 48px 24px;
+    text-align: center;
+    background: #f5f5f5;
+}
+
+.cmp-carcarousel__heading {
+    margin: 0 0 32px;
+    font-size: 28px;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+}
+
+.cmp-carcarousel__viewport {
+    position: relative;
+    display: flex;
+    align-items: center;
+    max-width: 1100px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.cmp-carcarousel__track {
+    display: flex;
+    gap: 24px;
+    transition: transform 0.4s ease;
+    will-change: transform;
+}
+
+.cmp-carcarousel__card {
+    flex: 0 0 280px;
+    background: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    text-align: left;
+}
+
+.cmp-carcarousel__image {
+    height: 180px;
+    background-size: cover;
+    background-position: center;
+    background-color: #d9d9d9;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.cmp-carcarousel__body {
+    padding: 16px;
+}
+
+.cmp-carcarousel__name {
+    margin: 0 0 8px;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.cmp-carcarousel__description {
+    margin: 0 0 12px;
+    font-size: 14px;
+    color: #555;
+    line-height: 1.4;
+}
+
+.cmp-carcarousel__cta {
+    display: inline-block;
+    padding: 8px 20px;
+    background: #4ba82e;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.cmp-carcarousel__cta:hover {
+    background: #3d8a25;
+}
+
+.cmp-carcarousel__nav {
+    flex: 0 0 auto;
+    z-index: 1;
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 50%;
+    background: #fff;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    font-size: 20px;
+    line-height: 1;
+    cursor: pointer;
+}
+
+.cmp-carcarousel__nav--prev {
+    margin-right: 12px;
+}
+
+.cmp-carcarousel__nav--next {
+    margin-left: 12px;
+}
+
+.cmp-carcarousel--empty {
+    padding: 32px;
+    border: 1px dashed #999;
+    text-align: center;
+    color: #666;
+}

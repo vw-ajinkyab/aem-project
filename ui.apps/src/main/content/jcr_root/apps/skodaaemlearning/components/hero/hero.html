@@ -1,0 +1,21 @@
+<!--/* Skoda Hero — HTL view. data-sly-use binds the Sling model (controller). */-->
+<sly data-sly-use.hero="com.skodaaem.aem.core.models.HeroModel"
+     data-sly-use.clientlib="core/wcm/components/commons/v1/templates/clientlib.html"
+     data-sly-call="${clientlib.css @ categories='skodaaemlearning.hero'}"/>
+
+<sly data-sly-test.hasContent="${!hero.empty}"/>
+
+<div data-sly-test="${hasContent}" class="cmp-hero"
+     style="${hero.backgroundStyle @ context='styleString'}">
+    <div class="cmp-hero__overlay">
+        <h1 class="cmp-hero__title">${hero.title}</h1>
+        <p class="cmp-hero__subtitle" data-sly-test="${hero.subtitle}">${hero.subtitle}</p>
+        <a class="cmp-hero__cta" data-sly-test="${hero.ctaText && hero.ctaLink}"
+           href="${hero.ctaLink}">${hero.ctaText}</a>
+    </div>
+</div>
+
+<!--/* Placeholder shown in the editor when the component has no content yet. */-->
+<div data-sly-test="${!hasContent && wcmmode.edit}" class="cmp-hero cmp-hero--empty">
+    <span>Skoda Hero — configure headline &amp; image</span>
+</div>

@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        pageTitle="Skoda AEM Learning"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="en"
+        cq:contextHubPath="/etc/cloudsettings/default/contexthub"
+        cq:contextHubSegmentsPath="/etc/segmentation/contexthub"
+        cq:template="/conf/skodaaemlearning/settings/wcm/templates/page-content"
+        sling:resourceType="skodaaemlearning/components/page"
+    >
+        <root
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="skodaaemlearning/components/container"
+            layout="responsiveGrid">
+            <container
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="skodaaemlearning/components/container">
+                <hero
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="skodaaemlearning/components/hero"
+                    title="Find Your Perfect &#352;koda"
+                    subtitle="Explore our latest cars"
+                    ctaText="Explore Cars"
+                    ctaLink="#our-cars"
+                    fileReference="/content/dam/skodaaemlearning/skoda-octavia-rs.webp"/>
+                <carcarousel
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="skodaaemlearning/components/carcarousel"
+                    sectionTitle="Our Cars">
+                    <cars jcr:primaryType="nt:unstructured">
+                        <item0
+                            jcr:primaryType="nt:unstructured"
+                            name="Kodiaq"
+                            description="A bold seven-seat SUV built for family adventures, combining spacious comfort with confident performance."
+                            fileReference="/content/dam/skodaaemlearning/kodiaq1.jpeg"
+                            link="https://www.skoda-auto.com/models/range/kodiaq"
+                            ctaLabel="Explore"/>
+                        <item1
+                            jcr:primaryType="nt:unstructured"
+                            name="Superb"
+                            description="The flagship saloon, blending generous space, refined design and advanced technology for effortless long-distance travel."
+                            fileReference="/content/dam/skodaaemlearning/Skoda_superb-1.webp"
+                            link="https://www.skoda-auto.com/models/range/superb"
+                            ctaLabel="Explore"/>
+                        <item2
+                            jcr:primaryType="nt:unstructured"
+                            name="Octavia RS"
+                            description="The sportier RS edition of the Octavia &#8212; sharper styling and tuned performance with everyday practicality."
+                            fileReference="/content/dam/skodaaemlearning/skoda-octavia-rs.webp"
+                            link="https://www.skoda-auto.com/models/range/octavia"
+                            ctaLabel="Explore"/>
+                    </cars>
+                </carcarousel>
+                <offerscontainer
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="skodaaemlearning/components/container"
+                    layout="responsiveGrid">
+                    <title
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="skodaaemlearning/components/title"
+                        jcr:title="Special Offers"
+                        type="h2">
+                        <cq:responsive jcr:primaryType="nt:unstructured">
+                            <default
+                                jcr:primaryType="nt:unstructured"
+                                offset="0"
+                                width="12"/>
+                        </cq:responsive>
+                    </title>
+                    <text
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="skodaaemlearning/components/text"
+                        text="&lt;p&gt;Finance / Leasing / Offers &#8212; talk to your local dealer about current &#352;koda finance, leasing and promotional offers.&lt;/p&gt;"
+                        textIsRich="true">
+                        <cq:responsive jcr:primaryType="nt:unstructured">
+                            <default
+                                jcr:primaryType="nt:unstructured"
+                                offset="0"
+                                width="12"/>
+                        </cq:responsive>
+                    </text>
+                </offerscontainer>
+                <whyskodacontainer
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="skodaaemlearning/components/container"
+                    layout="responsiveGrid">
+                    <title
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="skodaaemlearning/components/title"
+                        jcr:title="Why &#352;koda?"
+                        type="h2">
+                        <cq:responsive jcr:primaryType="nt:unstructured">
+                            <default
+                                jcr:primaryType="nt:unstructured"
+                                offset="0"
+                                width="12"/>
+                        </cq:responsive>
+                    </title>
+                    <featuresgrid
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="skodaaemlearning/components/container"
+                        layout="responsiveGrid">
+                        <safety
+                            jcr:primaryType="nt:unstructured"
+                            jcr:title="Safety"
+                            jcr:description="&lt;p&gt;Advanced driver-assistance systems and robust construction keep you and your family protected on every journey.&lt;/p&gt;"
+                            sling:resourceType="skodaaemlearning/components/teaser"
+                            actionsEnabled="false"
+                            descriptionFromPage="false"
+                            textIsRich="true"
+                            titleFromPage="false">
+                            <cq:responsive jcr:primaryType="nt:unstructured">
+                                <default
+                                    jcr:primaryType="nt:unstructured"
+                                    offset="0"
+                                    width="4"/>
+                            </cq:responsive>
+                        </safety>
+                        <technology
+                            jcr:primaryType="nt:unstructured"
+                            jcr:title="Technology"
+                            jcr:description="&lt;p&gt;Intuitive infotainment, connected services and driver aids that make every drive smarter and more convenient.&lt;/p&gt;"
+                            sling:resourceType="skodaaemlearning/components/teaser"
+                            actionsEnabled="false"
+                            descriptionFromPage="false"
+                            textIsRich="true"
+                            titleFromPage="false">
+                            <cq:responsive jcr:primaryType="nt:unstructured">
+                                <default
+                                    jcr:primaryType="nt:unstructured"
+                                    offset="0"
+                                    width="4"/>
+                            </cq:responsive>
+                        </technology>
+                        <comfort
+                            jcr:primaryType="nt:unstructured"
+                            jcr:title="Comfort &amp; Design"
+                            jcr:description="&lt;p&gt;Spacious, thoughtfully designed cabins with Simply Clever details that make everyday life easier.&lt;/p&gt;"
+                            sling:resourceType="skodaaemlearning/components/teaser"
+                            actionsEnabled="false"
+                            descriptionFromPage="false"
+                            textIsRich="true"
+                            titleFromPage="false">
+                            <cq:responsive jcr:primaryType="nt:unstructured">
+                                <default
+                                    jcr:primaryType="nt:unstructured"
+                                    offset="0"
+                                    width="4"/>
+                            </cq:responsive>
+                        </comfort>
+                    </featuresgrid>
+                </whyskodacontainer>
+            </container>
+        </root>
+    </jcr:content>
+</jcr:root>

@@ -1,0 +1,36 @@
+<!--/* Skoda Car Carousel — HTL view. Model supplies the car list; clientlib adds CSS/JS. */-->
+<sly data-sly-use.model="com.skodaaem.aem.core.models.CarCarouselModel"
+     data-sly-use.clientlib="core/wcm/components/commons/v1/templates/clientlib.html"
+     data-sly-call="${clientlib.css @ categories='skodaaemlearning.carcarousel'}"/>
+<sly data-sly-call="${clientlib.js @ categories='skodaaemlearning.carcarousel'}"/>
+
+<section data-sly-test="${!model.empty}" id="our-cars" class="cmp-carcarousel" data-cmp-is="carcarousel">
+    <h2 class="cmp-carcarousel__heading">${model.sectionTitle}</h2>
+
+    <div class="cmp-carcarousel__viewport">
+        <button class="cmp-carcarousel__nav cmp-carcarousel__nav--prev" type="button"
+                data-cmp-hook-carcarousel="prev" aria-label="Previous car">&#8249;</button>
+
+        <div class="cmp-carcarousel__track" data-cmp-hook-carcarousel="track">
+            <article class="cmp-carcarousel__card" data-sly-repeat.car="${model.cars}">
+                <div class="cmp-carcarousel__image"
+                     style="background-image:url('${car.image @ context='uri'}');"></div>
+                <div class="cmp-carcarousel__body">
+                    <h3 class="cmp-carcarousel__name">${car.name}</h3>
+                    <p data-sly-test="${car.description}" class="cmp-carcarousel__description">${car.description}</p>
+                    <a data-sly-test="${car.link}" class="cmp-carcarousel__cta"
+                       href="${car.link @ context='uri'}"
+                       target="_blank" rel="noopener noreferrer">${car.ctaLabel}</a>
+                </div>
+            </article>
+        </div>
+
+        <button class="cmp-carcarousel__nav cmp-carcarousel__nav--next" type="button"
+                data-cmp-hook-carcarousel="next" aria-label="Next car">&#8250;</button>
+    </div>
+</section>
+
+<!--/* Editor placeholder shown when no cars are configured yet. */-->
+<div data-sly-test="${model.empty && wcmmode.edit}" class="cmp-carcarousel cmp-carcarousel--empty">
+    <span>Car Carousel — open the dialog and add cars (name, image, link).</span>
+</div>

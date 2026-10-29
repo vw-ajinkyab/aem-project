@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:primaryType="cq:Component"
+    jcr:title="Skoda Hero"
+    jcr:description="Full-width hero banner with headline, subtitle and call-to-action"
+    componentGroup="Skoda AEM Learning - Content"/>

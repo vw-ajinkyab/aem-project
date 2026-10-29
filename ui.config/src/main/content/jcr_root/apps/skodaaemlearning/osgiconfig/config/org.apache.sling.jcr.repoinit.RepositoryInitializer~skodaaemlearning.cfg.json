@@ -1,0 +1,7 @@
+{
+    "scripts": [
+        "create path (sling:OrderedFolder) /content/dam/skodaaemlearning",
+        "create path (nt:unstructured) /content/dam/skodaaemlearning/jcr:content",
+        "set properties on /content/dam/skodaaemlearning/jcr:content\n  set cq:conf{String} to /conf/skodaaemlearning\n  set jcr:title{String} to \"Skoda AEM Learning\"\nend"
+    ]
+}
